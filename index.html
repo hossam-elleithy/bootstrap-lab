@@ -1,131 +1,119 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Register - Task 2</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Hossam Elleithy</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-        background: #f8f9fa;
-        }
-        .form-container {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 25px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
-        .hidden {
-        display: none;
-        }
-    </style>
-    </head>
-    <body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
 
 
-    <div id="loginForm" class="form-container">
-        <h3 class="text-center mb-4">Login</h3>
-        <form>
+  <header class="bg-dark text-white text-center py-4">
+    <h1>Hossam Elleithy</h1>
+    <p class="lead">Software Engineer | Full-Stack Developer (Python) | Competitive Programmer</p>
+  </header>
 
-        <div class="mb-3">
-            <label for="loginEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
-        </div>
-
-
-        <div class="mb-3">
-            <label for="loginPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
-        </div>
+  <section class="container my-5 text-center">
+    <h2 class="mb-3">Contact Information</h2>
+    <p><i class="fas fa-map-marker-alt text-danger"></i> El-Minshât El-Kubra, Kafr Ash Shaykh, Egypt</p>
+    <p><i class="fas fa-phone text-success"></i> 01018287310</p>
+    <p><i class="fas fa-envelope text-primary"></i> hossamelleithy403@gmail.com</p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/hossam-elleithy" target="_blank">github.com/hossam-elleithy</a></p>
+  </section>
 
 
-        <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="rememberMe">
-            <label class="form-check-label" for="rememberMe">Remember Me</label>
-        </div>
+  <section class="container my-5">
+    <h2 class="text-center mb-3">About Me</h2>
+    <p class="text-center">
+      Passionate about building scalable software solutions, full-stack web development with Python, 
+      and solving challenging algorithmic problems through competitive programming. 
+      Experienced in coaching, problem-solving, and applying artificial intelligence concepts in real-world contexts.
+    </p>
+  </section>
 
-        <button type="submit" class="btn btn-primary w-100">Login</button>
-
-        <p class="text-center mt-3">Don’t have an account? <a href="#" onclick="showRegister()">Register</a></p>
-        </form>
+  <section class="container my-5">
+    <h2 class="text-center mb-3">Skills</h2>
+    <div class="row text-center">
+      <div class="col-md-3 col-6 mb-3"><span class="badge bg-warning p-3">Python</span></div>
+      <div class="col-md-3 col-6 mb-3"><span class="badge bg-primary p-3">Web Development</span></div>
+      <div class="col-md-3 col-6 mb-3"><span class="badge bg-danger p-3">Competitive Programming</span></div>
+      <div class="col-md-3 col-6 mb-3"><span class="badge bg-success p-3">Machine Learning</span></div>
     </div>
+  </section>
 
-    <div id="registerForm" class="form-container hidden">
-        <h3 class="text-center mb-4">Register</h3>
-        <form onsubmit="redirectToLogin(event)">
-
-        <div class="mb-3">
-            <label for="fullName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="fullName" placeholder="Enter full name" required>
+  <section class="container my-5">
+    <h2 class="text-center mb-3">Projects</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio Website</h5>
+            <p class="card-text">A responsive portfolio showcasing personal and professional achievements using Bootstrap.</p>
+          </div>
         </div>
+      </div>
 
-
-        <div class="mb-3">
-            <label for="registerEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Problem-Solving Tracker</h5>
+            <p class="card-text">A Python app to track competitive programming progress and contest results.</p>
+          </div>
         </div>
+      </div>
 
-
-        <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">AI Projects</h5>
+            <p class="card-text">Implemented AI algorithms and ML models during my academic projects at Kafrelsheikh University.</p>
+          </div>
         </div>
-
-
-        <div class="mb-3">
-            <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" required>
-        </div>
-
-
-        <div class="mb-3">
-            <label for="registerPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="registerPassword" placeholder="Enter password" required>
-        </div>
-
-
-        <div class="mb-3">
-            <label for="confirmPassword" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
-        </div>
-
-
-        <div class="mb-3">
-            <label class="form-label">Gender</label>
-            <select class="form-select" required>
-            <option value="" disabled selected>Select your gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-            </select>
-        </div>
-
-
-        <button type="submit" class="btn btn-success w-100">Register</button>
-
-        <p class="text-center mt-3">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-        </form>
+      </div>
     </div>
+  </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function showRegister() {
-        document.getElementById("loginForm").classList.add("hidden");
-        document.getElementById("registerForm").classList.remove("hidden");
-        }
-        function showLogin() {
-        document.getElementById("registerForm").classList.add("hidden");
-        document.getElementById("loginForm").classList.remove("hidden");
-        }
-        function redirectToLogin(event) {
-        event.preventDefault();
-        alert("Registration successful! Redirecting to Login...");
-        showLogin();
-        }
-    </script>
-    </body>
-    </html>
+  <section class="container my-5">
+    <h2 class="text-center mb-3">Achievements</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">🏆 2021 - 2024 | ECPC AI KFS Local (1st Place) – Solved ~5 problems yearly, qualified for nationals</li>
+      <li class="list-group-item">🏆 2023 | ACPC Qualification – Solved 6 problems, competed on the regional level</li>
+    </ul>
+  </section>
+
+
+  <section class="container my-5">
+    <h2 class="text-center mb-3">Education</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>2016 - 2019:</b> El-Minshât El-Kubra Secondary School</li>
+      <li class="list-group-item"><b>2020 - 2024:</b> Faculty of Artificial Intelligence, Kafrelsheikh University</li>
+      <li class="list-group-item"><b>2024 - Present:</b> Faculty of Computers and Information, Cairo University</li>
+    </ul>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-3">Work Experience</h2>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Competitive Programming Coach (2022 - 2024)</h5>
+        <p class="card-text">Trained students in algorithms and problem-solving, helping them prepare for ICPC contests.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p>&copy; 2025 Hossam Elleithy. All rights reserved.</p>
+    <p>
+      <a href="https://facebook.com/hossam.elleithy" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-google-plus-g"></i></a>
+      <a href="mailto:hossamelleithy403@gmail.com" class="text-white"><i class="fas fa-envelope"></i></a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
